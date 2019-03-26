@@ -27,7 +27,8 @@
      <!-- *End Font Awesome -->
     <link rel="stylesheet" href="css/foundation.css">
     <link rel="stylesheet" href="css/app.css">
-    <link rel="stylesheet" href="css/app.css">
+
+    <link rel="stylesheet" href="css/paralax.css">
 
     <link rel="stylesheet" href="css/nav.css">
     <link rel="stylesheet" href="css/subnav.css">
@@ -36,69 +37,7 @@
     <link rel="stylesheet" href="css/content.css">
     <link rel="stylesheet" href="css/footer.css">
 
-    <style>
-    body, html {
-      height: 100%;
-      margin: 0;
-      font: 400 15px/1.8 "Lato", sans-serif;
-      color: #777;
-    }
 
-    .bgimg-1, .bgimg-2, .bgimg-3 {
-      position: relative;
-      opacity: 0.65;
-      background-attachment: fixed;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-
-    }
-    .bgimg-1 {
-      background-image: url("img_parallax.jpg");
-      min-height: 100%;
-    }
-
-    .bgimg-2 {
-      background-image: url("img_parallax2.jpg");
-      min-height: 400px;
-    }
-
-    .bgimg-3 {
-      background-image: url("img_parallax3.jpg");
-      min-height: 400px;
-    }
-
-    .caption {
-      position: absolute;
-      left: 0;
-      top: 50%;
-      width: 100%;
-      text-align: center;
-      color: #000;
-    }
-
-    .caption span.border {
-      background-color: #111;
-      color: #fff;
-      padding: 18px;
-      font-size: 25px;
-      letter-spacing: 10px;
-    }
-
-    h3 {
-      letter-spacing: 5px;
-      text-transform: uppercase;
-      font: 20px "Lato", sans-serif;
-      color: #111;
-    }
-
-    /* Turn off parallax scrolling for tablets and phones */
-    @media only screen and (max-device-width: 1024px) {
-      .bgimg-1, .bgimg-2, .bgimg-3 {
-        background-attachment: scroll;
-      }
-    }
-    </style>
   </head>
   <body>
 
@@ -153,6 +92,20 @@
      <a class="social-button tumblr" href="#"></a>
    </div>
    <!-- *End Socials -->
+
+   <!-- *End Header -->
+
+
+   <!-- *Begin Content -->
+   <div ng-view></div>
+   <!-- *Begin AngularJS -->
+   <div>
+     <label>Name:</label>
+     <input type="text" ng-model="yourName" placeholder="Enter a name here">
+     <hr>
+     <h1>Hello {{yourName}}!</h1>
+   </div>
+   <!-- *End AngularJS -->
    <div class="bgimg-1">
      <div class="caption">
      <span class="border">SCROLL DOWN</span>
@@ -193,19 +146,6 @@
      <span class="border">COOL!</span>
      </div>
    </div>
-   <!-- *End Header -->
-
-
-   <!-- *Begin Content -->
-   <div ng-view></div>
-   <!-- *Begin AngularJS -->
-   <div>
-     <label>Name:</label>
-     <input type="text" ng-model="yourName" placeholder="Enter a name here">
-     <hr>
-     <h1>Hello {{yourName}}!</h1>
-   </div>
-   <!-- *End AngularJS -->
    <!-- *End Content -->
 
 
@@ -287,6 +227,8 @@
     <script src="js/vendor/what-input.js"></script>
     <script src="js/vendor/foundation.js"></script>
     <script src="js/app.js"></script>
+
+
 
     <script src="js/spa.js"></script>
   </body>
